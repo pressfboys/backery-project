@@ -1,0 +1,44 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 30px 20px 252px 20px;
+}
+
+.header-container .img-logo {
+  max-width: 100%; /* Устанавливаем максимальную ширину в зависимости от родительского контейнера */
+  height: auto; /* Сохраняем пропорции изображения */
+}
+
+.navigation-container {
+  display: flex;
+  gap: 60px;
+}
+
+.navigation-container select {
+  border: none;
+}
+
+/* Main block */
+.main-text-container {
+  display: flex;
+  justify-content: end;
+  margin: 0px 20px 168px 20px;
+}
+
+.main-text {
+  width: 100%;
+  max-width: 257px;
+}
