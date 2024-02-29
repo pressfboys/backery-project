@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: blanchedalmond;
+  border: 3px solid rebeccapurple;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
