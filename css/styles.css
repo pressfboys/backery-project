@@ -259,9 +259,10 @@ p {
 }
 
 .container-item {
-  width: 100%;
+  flex-basis: 100%;
   max-width: 605px;
   display: flex;
+  align-self: flex-start;
   gap: 30px;
 }
 
@@ -282,6 +283,20 @@ p {
   color: var(--primary-color-light);
   font-weight: 300;
   font-size: 14px;
+}
+
+.formats-slider {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.format-item {
+  padding: 24px;
+  background-color: lightgrey;
+  border: 1px solid gray;
+  border-radius: 16px;
+  flex-basis: calc((100% - 40px) / 3);
 }
 
 /* Contact-form section */
