@@ -106,6 +106,7 @@ p {
   background-color: var(--primary-brand-light);
   display: flex;
   padding: 16px 32px;
+  margin: 10px 0px;
   align-items: flex-start;
   gap: 10px;
   font-weight: 600;
