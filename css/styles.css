@@ -38,6 +38,13 @@
 }
 
 /* Base styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   color: var(--primary-dark);
   font-family: 'Poppins', sans-serif;
@@ -67,6 +74,9 @@ H3 {
 }
 
 /* Header */
+.header {
+  margin-bottom: 181px;
+}
 .link {
   color: var(--primary-light);
   text-decoration: none;
@@ -94,6 +104,9 @@ button:hover {
 }
 
 /* Main section */
+.hero-title {
+  padding: 0 159px 272px 158px;
+}
 .hero-section h1 {
   text-align: center;
   color: var(--primary-light);
