@@ -45,6 +45,26 @@
   padding: 0px;
 }
 
+.vissualy-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.section {
+  padding: 48px 0px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0px 24px;
+}
+
 body {
   color: var(--primary-dark);
   font-family: 'Poppins', sans-serif;
@@ -74,9 +94,6 @@ H3 {
 }
 
 /* Header */
-.header {
-  margin-bottom: 181px;
-}
 .link {
   color: var(--primary-light);
   text-decoration: none;
@@ -104,8 +121,8 @@ button:hover {
 }
 
 /* Main section */
-.hero-title {
-  padding: 0 159px 272px 158px;
+.hero-section {
+  padding: 272px 0;
 }
 .hero-section h1 {
   text-align: center;
@@ -113,33 +130,63 @@ button:hover {
   font-size: 128px;
 }
 
-.advantages-block {
-  font-weight: 300;
-  font-size: 20px;
+/* Adventages section */
+.advantages-section {
+  padding-top: 0px;
 }
-
-/* Traditions section */
-.traditions-text span {
-  text-transform: uppercase;
-}
-
-/* Advantages-block */
 
 .advantages-block {
   color: var(--primary-light);
   background-color: var(--primary-brand-light);
 }
 
-/* Chef section */
+/* Traditions section */
+.formats-title {
+  margin-bottom: 42px;
+}
+
+.advantages-block {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.traditions-text span {
+  text-transform: uppercase;
+}
+
+/* Chefs section */
+
+.chefs-title {
+  margin-bottom: 80px;
+}
+
+.chef-title {
+  margin-bottom: 16px;
+}
 
 h2 .accient {
   color: var(--primary-brand-dark);
 }
 
+/* Formats section */
+.formats-title {
+  margin-bottom: 80px;
+}
+
 /* Contacts section */
+.contacts-title {
+  margin-bottom: 16px;
+}
 
 .contacts-section .accient {
   color: var(--primary-brand-dark);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  max-width: 603px;
+  max-height: 595px;
 }
 
 /* Footer */
