@@ -156,13 +156,11 @@ button:hover {
 }
 
 .advantages-block {
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-around;
   color: var(--primary-light);
   background-color: var(--primary-brand-light);
-}
-
-/* Traditions section */
-.formats-title {
-  margin-bottom: 42px;
 }
 
 .advantages-block {
@@ -170,14 +168,55 @@ button:hover {
   font-size: 20px;
 }
 
+/* Traditions section */
+.traditions-title {
+  margin-bottom: 42px;
+}
+
+.traditions-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.traditions-text-block {
+  width: 100%;
+  max-width: 708px;
+  margin-right: 24px;
+}
+
+.traditions-img {
+  align-self: flex-end;
+}
+
+.traditions-text {
+  margin-bottom: 42px;
+}
+
 .traditions-text span {
   text-transform: uppercase;
 }
 
 /* Chefs section */
+.chefs-title-block {
+  margin-bottom: 80px;
+  display: flex;
+  align-items: flex-end;
+}
+.chefs-title-img {
+  padding-bottom: 23px;
+}
+
+.chefs-cards {
+  display: flex;
+}
+
+.chef-text {
+  display: flex;
+}
 
 .chefs-title {
-  margin-bottom: 80px;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 .chef-title {
