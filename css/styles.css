@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Dancing Script', cursive;
   background: linear-gradient(135deg, #ff758c, #ff7eb3);
   height: 100vh;
   display: flex;
@@ -232,7 +232,8 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Dancing Script', cursive;
+
   color: #f10c2e;
   backdrop-filter: blur(5px); /* Эффект размытия */
   animation: fadeIn 0.5s ease-in-out;
@@ -241,7 +242,8 @@ body {
 .love-text {
   font-size: 22px;
   text-align: center;
-  font-family: 'Cursive', sans-serif;
+  font-family: 'Dancing Script', cursive;
+
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInText 1.5s ease-in-out forwards;
@@ -282,7 +284,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Dancing Script', cursive;
 }
 
 /* Кнопка для управления музыкой */
