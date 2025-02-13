@@ -1,263 +1,312 @@
-@font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../fonts/poppins-v21-latin-300.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/poppins-v21-latin-regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/poppins-v21-latin-600.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 900;
-  src: url('../fonts/poppins-v21-latin-900.woff2') format('woff2');
-}
-
-:root {
-  --primary-dark: #31261a;
-  --primary-light: #faf4ea;
-  --primary-brand-light: #819b57;
-  --primary-brand-dark: #465929;
-}
-
-/* Base styles */
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-
-.vissualy-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.section {
-  padding: 48px 0px;
-}
-
-.container {
-  width: 100%;
-  max-width: 1288px;
-  margin: 0 auto;
-  padding: 0px 24px;
 }
 
 body {
-  color: var(--primary-dark);
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  background-color: gray;
-  padding-top: 32px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-H2 {
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 84px;
-}
-
-H3 {
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 60px;
-}
-
-.accient {
-  color: var(--primary-brand-light);
-  font-weight: 600;
-}
-
-/* Header */
-.header-container {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  height: 100vh;
   display: flex;
-  align-items: center;
-}
-
-.header-menu {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-}
-
-.menu-items {
-  display: flex;
-  flex-grow: 1;
   justify-content: center;
-  gap: 64px;
-}
-
-.link {
-  color: var(--primary-light);
-  text-decoration: none;
-}
-
-.link:hover {
-  color: var(--primary-brand-light);
-}
-
-button {
-  color: var(--primary-light);
-  background-color: var(--primary-brand-light);
-  border: 2px solid var(--primary-brand-light);
-  border-radius: 8px;
-  padding: 16px 32px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-button:hover {
-  color: var(--primary-brand-light);
-  background-color: transparent;
-  border: 2px solid var(--primary-brand-light);
-}
-
-/* Main section */
-.hero-section {
-  padding: 272px 0;
-}
-.hero-section h1 {
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  color: var(--primary-light);
-  font-size: 128px;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Adventages section */
-.advantages-section {
-  padding-top: 0px;
-}
-
-.advantages-block {
-  padding: 16px 0;
-  display: flex;
-  justify-content: space-around;
-  color: var(--primary-light);
-  background-color: var(--primary-brand-light);
-}
-
-.advantages-block {
-  font-weight: 300;
-  font-size: 20px;
-}
-
-/* Traditions section */
-.traditions-title {
-  margin-bottom: 42px;
-}
-
-.traditions-section {
-  display: flex;
-  justify-content: space-between;
-}
-
-.traditions-text-block {
-  width: 100%;
-  max-width: 708px;
-  margin-right: 24px;
-}
-
-.traditions-img {
-  align-self: flex-end;
-}
-
-.traditions-text {
-  margin-bottom: 42px;
-}
-
-.traditions-text span {
-  text-transform: uppercase;
-}
-
-/* Chefs section */
-.chefs-title-block {
-  margin-bottom: 80px;
-  display: flex;
-  align-items: flex-end;
-}
-.chefs-title-img {
-  padding-bottom: 23px;
-}
-
-.chefs-cards {
-  display: flex;
-}
-
-.chef-text {
-  display: flex;
-}
-
-.chefs-title {
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.chef-title {
-  margin-bottom: 16px;
-}
-
-h2 .accient {
-  color: var(--primary-brand-dark);
-}
-
-/* Formats section */
-.formats-title {
-  margin-bottom: 80px;
-}
-
-/* Contacts section */
-.contacts-title {
-  margin-bottom: 16px;
-}
-
-.contacts-section .accient {
-  color: var(--primary-brand-dark);
-}
-
-.map {
+/* Анимированные сердца на фоне */
+.hearts-container {
+  position: absolute;
   width: 100%;
   height: 100%;
-  max-width: 603px;
-  max-height: 595px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
 }
 
-/* Footer */
-
-.footer-navigation span {
-  color: #a18268;
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
 }
 
-.link-politic {
-  color: var(--primary-dark);
+.hearts-container::before {
+  content: '💖 💕 💗 ❤️ 💞';
+  font-size: 1.5rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: float 8s infinite ease-in-out alternate;
 }
 
-.link-politic:hover {
-  color: var(--primary-brand-light);
+/* Основной контейнер */
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: glow 2s infinite alternate;
+  margin-bottom: 20px;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px white;
+  }
+  100% {
+    text-shadow: 0 0 20px pink;
+  }
+}
+
+.message {
+  font-size: 1.5rem;
+  color: white;
+  margin: 20px 0;
+  font-style: italic;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.love-button {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.love-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+/* Всплывающее окно */
+.love-message {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  text-align: left;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.love-message ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.love-message li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.love-message button {
+  background: linear-gradient(135deg, #28a745, #45c477);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.love-massege-h2 {
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 1.5rem;
+  color: red;
+  animation: floatUp 1s ease-in-out forwards;
+  pointer-events: none;
+  user-select: none;
+  z-index: 9999;
+}
+
+/* Анимация подъема сердечка */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Заголовок модального окна */
+.modal h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Список причин */
+.modal ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal li {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* Кнопка закрытия */
+.close-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff69b4; /* Ярко-розовый */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: #ff1493; /* Более насыщенный розовый */
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  background: rgba(255, 182, 193, 0.9); /* Нежно-розовый с прозрачностью */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #f10c2e;
+  backdrop-filter: blur(5px); /* Эффект размытия */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.love-text {
+  font-size: 22px;
+  text-align: center;
+  font-family: 'Cursive', sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInText 1.5s ease-in-out forwards;
+
+  /* Полупрозрачный розовый фон */
+  background: rgba(255, 182, 193, 0.7);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+
+  /* Цвет текста — мягкий персиковый оттенок */
+  color: #f10c2e; /* Персиково-розовый (бледный) */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для текста для выделения */
+}
+
+/* Анимация появления текста */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Стилизация музыкального плеера */
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 182, 193, 0.8); /* Прозрачный розовый фон */
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Кнопка для управления музыкой */
+.play-pause-btn {
+  background: #ff69b4; /* Розовый цвет */
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* При наведении кнопка меняет цвет */
+.play-pause-btn:hover {
+  background: #ff1493; /* Темнее розовый */
+}
+
+/* Стиль текста для сообщения, если нет поддержки аудио */
+audio {
+  display: none;
 }
