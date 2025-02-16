@@ -17,7 +17,6 @@ body {
   position: relative;
 }
 
-/* Анимированные сердца на фоне */
 .hearts-container {
   position: absolute;
   width: 100%;
@@ -48,7 +47,6 @@ body {
   animation: float 8s infinite ease-in-out alternate;
 }
 
-/* Основной контейнер */
 .container {
   max-width: 600px;
   width: 100%;
@@ -97,7 +95,6 @@ body {
   background: linear-gradient(135deg, #ff4b2b, #ff416c);
 }
 
-/* Всплывающее окно */
 .love-message {
   display: none;
   background-color: rgba(0, 0, 0, 0.85);
@@ -159,7 +156,6 @@ body {
   z-index: 9999;
 }
 
-/* Анимация подъема сердечка */
 @keyframes floatUp {
   0% {
     transform: translateY(0) scale(1);
@@ -183,13 +179,11 @@ body {
   }
 }
 
-/* Заголовок модального окна */
 .modal h2 {
   font-size: 24px;
   margin-bottom: 15px;
 }
 
-/* Список причин */
 .modal ul {
   list-style-type: none;
   padding: 0;
@@ -200,12 +194,11 @@ body {
   margin: 5px 0;
 }
 
-/* Кнопка закрытия */
 .close-btn {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: #ff69b4; /* Ярко-розовый */
+  background: #ff69b4;
   color: white;
   font-size: 16px;
   border: none;
@@ -215,10 +208,9 @@ body {
 }
 
 .close-btn:hover {
-  background: #ff1493; /* Более насыщенный розовый */
+  background: #ff1493;
 }
 
-/* Стили для модального окна */
 .modal {
   display: none;
   position: fixed;
@@ -227,7 +219,7 @@ body {
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 500px;
-  background: rgba(255, 182, 193, 0.9); /* Нежно-розовый с прозрачностью */
+  background: rgba(255, 182, 193, 0.9);
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -235,7 +227,7 @@ body {
   font-family: 'Dancing Script', cursive;
 
   color: #f10c2e;
-  backdrop-filter: blur(5px); /* Эффект размытия */
+  backdrop-filter: blur(5px);
   animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -248,19 +240,16 @@ body {
   transform: translateY(20px);
   animation: fadeInText 1.5s ease-in-out forwards;
 
-  /* Полупрозрачный розовый фон */
   background: rgba(255, 182, 193, 0.7);
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: inline-block;
 
-  /* Цвет текста — мягкий персиковый оттенок */
-  color: #f10c2e; /* Персиково-розовый (бледный) */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для текста для выделения */
+  color: #f10c2e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Анимация появления текста */
 @keyframes fadeInText {
   from {
     opacity: 0;
@@ -272,12 +261,11 @@ body {
   }
 }
 
-/* Стилизация музыкального плеера */
 .music-player {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: rgba(255, 182, 193, 0.8); /* Прозрачный розовый фон */
+  background: rgba(255, 182, 193, 0.8);
   padding: 10px 20px;
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -287,9 +275,8 @@ body {
   font-family: 'Dancing Script', cursive;
 }
 
-/* Кнопка для управления музыкой */
 .play-pause-btn {
-  background: #ff69b4; /* Розовый цвет */
+  background: #ff69b4;
   color: white;
   font-size: 20px;
   border: none;
@@ -303,12 +290,10 @@ body {
   justify-content: center;
 }
 
-/* При наведении кнопка меняет цвет */
 .play-pause-btn:hover {
-  background: #ff1493; /* Темнее розовый */
+  background: #ff1493;
 }
 
-/* Стиль текста для сообщения, если нет поддержки аудио */
 audio {
   display: none;
 }
