@@ -123,7 +123,7 @@ H3 {
   color: var(--primary-brand-light);
 }
 
-button {
+.button {
   color: var(--primary-light);
   background-color: var(--primary-brand-light);
   border: 2px solid var(--primary-brand-light);
@@ -134,7 +134,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   color: var(--primary-brand-light);
   background-color: transparent;
   border: 2px solid var(--primary-brand-light);
